@@ -23,5 +23,5 @@ It is commonly referred to as the “ELK” stack after its components Elasticse
 The Elasticsearch architecture uses two main ports for communication:
 
 -   **Port 9200**—used to filter requests coming from outside the cluster. This process meets requests coming through the REST APIs used for querying, indexing, and more.
--   
+
 -   **Port 9300**— used for inter-node communication. This occurs in the transport layer.
