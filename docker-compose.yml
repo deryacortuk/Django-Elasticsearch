@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+    web:
+        build: 
+            context: . 
+        container_name: web      
+        restart: always   
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+          - .:/app
+        ports:
+          - "8000:8000"
+        depends_on:
+          - elasticsearch
+          - redis
+        networks:
+          - elastic
+        
+
+    elasticsearch:
+        image: elasticsearch:8.6.2
+        volumes:
+          - ./data/elastic:/var/lib/elasticsearch/data
+        environment:
+          - discovery.type=single-node
+          - xpack.security.enabled=false
+        ports:
+          - 9200:9200
+        networks:
+          - elastic
+
+    redis:
+      image: redis:6.2-alpine   
+     
+      restart: always   
+      ports:
+        - '6379:6379' 
+networks:
+  elastic:
+    driver: bridge
