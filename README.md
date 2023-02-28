@@ -16,7 +16,7 @@ Elasticsearch is a distributed, free and open search and analytics engine for al
 
 Elasticsearch uses shipping agents, called beats, to transfer raw data from multiple sources into Elasticsearch. After data is shipped into Elasticsearch, the engine runs data ingestion processes, which parse, normalize, enrich, and prepare data for indexing. After the data is indexed, users can run complex queries and use aggregations to retrieve complex data summaries.
 
-It is commonly referred to as the “ELK” stack after its components Elasticsearch, Logstash, and Kibana and now also includes Beats. For visualization and management, the Elastic Stack offers a tool called Kibana, which enables users to create real-time data visualizations, such as pie charts, maps, line graphs, and histograms. Kibana also lets you share dashboards, use Canvas to create custom dynamic infographics, and use Elastic Maps to visualize geospatial data. Although a search engine at its core, users started using Elasticsearch for log data and wanted a way to easily ingest and visualize that data.
+For visualization and management, the Elastic Stack offers a tool called Kibana, which enables users to create real-time data visualizations, such as pie charts, maps, line graphs, and histograms. Kibana also lets you share dashboards, use Canvas to create custom dynamic infographics, and use Elastic Maps to visualize geospatial data. Although a search engine at its core, users started using Elasticsearch for log data and wanted a way to easily ingest and visualize that data.
 
 ### The Ports 9200 and 9300
 
